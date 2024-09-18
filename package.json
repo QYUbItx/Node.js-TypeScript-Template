@@ -1,0 +1,25 @@
+{
+    "name": "test",
+    "version": "",
+    "main": "dist/index.js",
+    "scripts": {
+      "install": "tsc --init",
+      "build": "rimraf dist && npx tsc",
+      "prestart": "npm run build",
+      "start": "node dist/index.js",
+      "predev": "npm run build",
+      "dev": "concurrently \"tsc -w\" \"nodemon\""
+    },
+    "keywords": [],
+    "author": "",
+    "license": "",
+    "description": "",
+    "devDependencies": {
+      "@types/node": "^22.5.5",
+      "concurrently": "^9.0.1",
+      "nodemon": "^3.1.5",
+      "rimraf": "^6.0.1",
+      "typescript": "^5.6.2"
+    },
+    "dependencies": {}
+  }
